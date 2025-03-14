@@ -20,7 +20,7 @@ pub fn init_logging() {
 
     #[cfg(any(target_os = "ios", target_os = "macos"))]
     {
-        oslog::OsLogger::new("com.example.counter")
+        oslog::OsLogger::new("com.rmp.{{ project-name | downcase }}")
             .level_filter(LevelFilter::Debug)
             .category_level_filter("Settings", LevelFilter::Trace)
             .init()

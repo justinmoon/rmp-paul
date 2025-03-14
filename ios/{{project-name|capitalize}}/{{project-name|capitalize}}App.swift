@@ -1,15 +1,15 @@
 import SwiftUI
 
 @main
-struct CounterApp: App {
+struct {{project-name|capitalize}}App: App {
     var body: some Scene {
         WindowGroup {
-            Counter()
+            {{project-name|capitalize}}()
         }
     }
 }
 
-struct Counter: View {
+struct {{project-name|capitalize}}: View {
     @State var view_model: ViewModel;
     
     public init() {
@@ -48,8 +48,8 @@ struct Counter: View {
     }
 }
 
-struct Counter_Previews: PreviewProvider {
+struct {{project-name|capitalize}}_Previews: PreviewProvider {
     static var previews: some View {
-        Counter()
+        {{project-name|capitalize}}()
     }
 }

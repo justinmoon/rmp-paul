@@ -1,4 +1,4 @@
-import Counter
+import {{project-name|capitalize}}
 import SwiftUI
 
 @Observable class ViewModel: RmpViewModel {
