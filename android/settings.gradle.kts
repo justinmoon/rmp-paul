@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Counter"
+// rootProject.name = "Counter"
+rootProject.name = "{{ project-name | capitalize }}"
 include(":app")

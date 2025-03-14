@@ -9,9 +9,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.counter.ViewModel
+import {{android-bundle-id}}.ViewModel
 import androidx.compose.runtime.collectAsState
-import uniffi.counter.Action
+import uniffi.{{project-name}}.Action
 
 @Composable
 fun Counter(viewModel: ViewModel) {

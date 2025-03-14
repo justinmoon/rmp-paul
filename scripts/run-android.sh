@@ -3,7 +3,7 @@ set -ex
 cd android
 
 # Variables
-PACKAGE_NAME="com.example.counter"
+PACKAGE_NAME="{{android-bundle-id}}"
 ACTIVITY_NAME=".MainActivity"
 APK_PATH="app/build/outputs/apk/debug/app-debug.apk"
 

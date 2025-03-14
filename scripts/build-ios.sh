@@ -17,13 +17,13 @@ else
 fi
 
 # Make sure the directory exists
-mkdir -p ios/Counter.xcframework bindings ios/Counter
+mkdir -p ios/{{ project-name | capitalize }}.xcframework bindings ios/{{ project-name | capitalize }}
 
 # Build the dylib
 cargo build
  
 # Generate bindings
-cargo run --bin uniffi-bindgen generate --library ./target/debug/libcounter.dylib --language swift --out-dir ./bindings
+cargo run --bin uniffi-bindgen generate --library ./target/debug/lib{{ project-name | downcase }}.dylib --language swift --out-dir ./bindings
  
 # Add the iOS targets and build
 for TARGET in \
@@ -38,18 +38,18 @@ do
 done
  
 # Rename *.modulemap to module.modulemap
-mv ./bindings/counterFFI.modulemap ./bindings/module.modulemap
+mv ./bindings/{{ project-name | downcase }}FFI.modulemap ./bindings/module.modulemap
  
 # Move the Swift file to the project
-rm ./ios/Counter/Counter.swift || true
-mv ./bindings/counter.swift ./ios/Counter/Counter.swift
+rm ./ios/{{ project-name | capitalize }}/{{ project-name | capitalize }}.swift || true
+mv ./bindings/{{ project-name | downcase }}.swift ./ios/{{ project-name | capitalize }}/{{ project-name | capitalize }}.swift
  
 # Recreate XCFramework
-rm -rf "ios/Counter.xcframework" || true
+rm -rf "ios/{{ project-name | capitalize }}.xcframework" || true
         # -library ./target/aarch64-apple-ios/release/libcove.a -headers ./bindings \
 xcodebuild -create-xcframework \
-        -library ./target/aarch64-apple-ios-sim/debug/libcounter.a -headers ./bindings \
-        -output "ios/Counter.xcframework"
+        -library ./target/aarch64-apple-ios-sim/debug/lib{{ project-name | downcase }}.a -headers ./bindings \
+        -output "ios/{{ project-name | capitalize }}.xcframework"
  
 # Cleanup
 rm -rf bindings

@@ -1,1 +1,2 @@
-`rust-multiplatform` template for a counter app
+# {{project-name}}
+

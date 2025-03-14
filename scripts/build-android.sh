@@ -30,6 +30,6 @@ cargo ndk -o ../android/app/src/main/jniLibs \
  
 # Create Kotlin bindings
 cargo run --bin uniffi-bindgen generate \
-    --library ./target/debug/libcounter.dylib \
+    --library ./target/debug/lib{{project-name}}.dylib \
     --language kotlin \
-    --out-dir ../android/app/src/main/java/com/example/counter
+    --out-dir ../android/app/src/main/java/{{bundle-id-tld}}/{{bundle-id-org}}/{{bundle-id-app}}

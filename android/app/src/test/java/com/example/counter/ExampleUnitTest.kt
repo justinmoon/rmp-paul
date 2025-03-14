@@ -1,4 +1,4 @@
-package com.example.counter
+package {{ project-name }}
 
 import org.junit.Test
 
