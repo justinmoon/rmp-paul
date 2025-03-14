@@ -1,0 +1,1 @@
+`rust-multiplatform` template for a counter app
