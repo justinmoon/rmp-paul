@@ -10,5 +10,5 @@
 local.properties
 
 # rust code
-app/src/main/java/com/example/counter/uniffi
+app/src/main/java/com/example/{{project-name}}/uniffi
 app/src/main/jniLibs

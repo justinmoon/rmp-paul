@@ -1,11 +1,11 @@
 [package]
-name = "counter"
+name = "{{project-name}}"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
 crate_type = ["cdylib", "staticlib"]
-name = "counter"
+name = "{{project-name}}"
 
 [dependencies]
 crossbeam = "0.8.4"

@@ -1,13 +1,14 @@
-package com.example.counter
+package {{android-bundle-id}}
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import uniffi.counter.Action
-import uniffi.counter.ModelUpdate
-import uniffi.counter.RmpModel
-import uniffi.counter.RmpViewModel
+// FIXME: should we lowercase these or something
+import uniffi.{{project-name}}.Action
+import uniffi.{{project-name}}.ModelUpdate
+import uniffi.{{project-name}}.RmpModel
+import uniffi.{{project-name}}.RmpViewModel
 
 class ViewModel(context: Context) : ViewModel(), RmpViewModel  {
     private val model: RmpModel
