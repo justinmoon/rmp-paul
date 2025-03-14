@@ -22,7 +22,7 @@ run-simulator:
     open -a Simulator
 
 build-ios profile="debug":
-    bash scripts/build-ios.sh {{profile}}
+    bash scripts/build-ios.sh {% raw %}{{profile}}{% endraw %}
 
 run-ios: build-ios
     bash scripts/run-ios.sh

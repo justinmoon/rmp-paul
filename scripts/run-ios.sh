@@ -2,9 +2,9 @@
 set -ex
 cd ios
 
-SCHEME="Counter"
-APP_NAME="Counter"
-BUNDLE_ID="com.example.counter.Counter" # FIXME: why the extra .Counter?
+SCHEME="{{ project-name | capitalize }}"
+APP_NAME="{{ project-name | capitalize }}"
+BUNDLE_ID="com.rmp.{{ project-name | downcase }}.{{ project-name | capitalize }}" # FIXME: why the extra .Counter?
 DESTINATION='platform=iOS Simulator,name=iPhone 16 Pro,OS=latest'
 
 # Build the app

@@ -2,7 +2,7 @@
 ignore = [
     "target",
     ".git",
-    "ios/Counter.xcodeproj/project.xcworkspace/xcuserdata/justin.xcuserdatad/UserInterfaceState.xcuserstate",
+    "ios/{{project-name|capitalize}}.xcodeproj/project.xcworkspace/xcuserdata/justin.xcuserdatad/UserInterfaceState.xcuserstate",
 ]
 exclude = [
     "android/app/src/main/res/mipmap-*/",
