@@ -89,11 +89,11 @@ impl RmpModel {
     }
 
     // TODO: should it be
-    pub fn listen_for_model_updates(&self, updater: Box<dyn RmpViewModel>) {
+    pub fn listen_for_model_updates(&self, view_model: Box<dyn RmpViewModel>) {
         self.get_or_set_global_model()
             .read()
             .expect("fixme")
-            .listen_for_model_updates(updater);
+            .listen_for_model_updates(view_model);
     }
 
     // FIXME: could have just a `get_initial_state` which just returns a big struct.
