@@ -13,7 +13,6 @@ import SwiftUI
         self.model = model
         self.count = model.getCount();
     
-        self.model.setupLogging()
         self.model.listenForModelUpdates(viewModel: self)
     }
 
